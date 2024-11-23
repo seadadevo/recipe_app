@@ -1,0 +1,18 @@
+.footer {
+  background-color: #0f0f0f;
+  color: #fff;
+  padding-block: 3em;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 1em;
+}
+.footer .footer-section p {
+  opacity: 0.8;
+  margin-bottom: 0.5em;
+}
+.footer .footer-section p.title {
+  opacity: 1;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}/*# sourceMappingURL=footer.css.map */

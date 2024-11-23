@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "flowbite/dist/flowbite.min.css";
+:root {
+  --background-color: #fff;
+  --background-light: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --primary-color: rgb(255, 0, 86);
+  --text-color: #0a0a0a;
+  --text-light: #575757;
+  --font-size: 16px;
+  --animation-speed: 1;
+}
+
+@function getAnimationDuration($duration: number) {
+  @return calc($duration * var(--animation-speed));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: "Roboto", sans-serif;
+  padding-top: 55px;
+  background-color: var(--background-light) ;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  object-fit: cover;
+}
+.btn {
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75em 1em;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 1px 3px var(--shadow-color);
+  }
+}
+
+.custom-image {
+  height: 0;
+  width: 100%;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// ! NavBar Style
+@import "partials/navbar";
+
+.section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3vw;
+  &.d-block {
+    display: block;
+  }
+  .title {
+    color: var(--text-color);
+    font-size: 2.5em;
+    margin-bottom: 0.25em;
+    font-weight: 900;
+  }
+  .info {
+    color: var(--text-light);
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+    margin-bottom: 1.5em;
+  }
+  .col {
+    width: 50%;
+  }
+}
+// ! SignUp and SignIn
+@import "partials/signUp";
+// ! hero section
+@import "partials/hero-section";
+// ! improve Skills sec
+@import "partials/improveSkills";
+// ! quote sec
+@import "partials/quote";
+// ! Top Dishes
+.sec {
+  margin-bottom: 2em;
+  .title{ 
+     color: var(--text-color);
+     font-size: 2.5em;
+     margin-bottom: 0.25em;
+     margin-top: 0.25em;
+     font-weight: 900;
+  }
+}
+// ! Start Chef
+@import "partials/topChief";
+// ! Start prevSearch
+@import "partials/prevSearch";
+// ! Start preview recipes
+@import "partials/recipes";
+// ! Start setting
+@import "partials/settings";
+
+
+// ! Start Footer
+@import "partials/footer";
+
+.main {
+  padding-block: 3vw;
+}
+.container {
+  padding-inline: 20vw;
+}
+
+@import "partials/animation";
+
+// ! Responsive
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-inline: 14vw;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    padding-inline: 12vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-inline: 6vw;
+  }
+
+  .navbar {
+    .nav-links {
+      display: none;
+    }
+    .sidebar-btn {
+      display: block;
+    }
+  }
+
+  .section {
+    .col {
+      width: 100%;
+      padding: 0 !important;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+  }
+  .skill-item {
+    display: inline-block;
+    margin: 0.75em;
+  }
+  .section.improve-skills .btn {
+    display: block;
+    margin: auto;
+  }
+  .chief-card {
+    box-shadow: 0 5px 10px var(--shadow-color);
+  }
+  .footer {
+    grid-template-columns: repeat(4, 1fr);
+    .footer-section:nth-child(1) {
+      grid-column: span 4;
+    }
+    .footer-section:nth-child(2),
+    .footer-section:nth-child(3) {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding-inline: 3vw;
+  }
+}

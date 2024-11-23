@@ -1,0 +1,82 @@
+.form-container {
+    background: linear-gradient(to right, #ffd3bd, #fcc8bb);
+    border-radius: .8em;
+    padding: 4em;
+
+    .card {
+        background-color: #fff;
+        box-shadow: 0 2px 6px var(--shadow-color);
+        border-radius: .8em;
+        padding: 1.2em;
+
+        .title {
+            text-shadow: 0 1px 3px var(--shadow-color);
+            text-align: center;
+            margin-bottom: .8em;
+        }
+
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: .8em;
+
+            input {
+                border: none;
+                border-bottom: 1px solid var(--shadow-color);
+                padding: 1em 2em;
+                outline: none;
+                width: 100%;
+            }
+
+            select {
+                width: 100%;
+                padding: 1em;
+                color: var(--text-light);
+                border: none;
+                border-bottom: 1px solid var(--shadow-color);
+            }
+
+            .desc {
+                width: 100%;
+                border: 1px solid var(--shadow-color);
+                color: var(--text-light);
+                margin-bottom: .5em;
+            }
+
+            textarea {
+                width: 100%;
+                height: 150px;
+                border: 1px solid var(--shadow-color);
+                outline: none;
+                padding: .5em;
+            }
+
+            .btn {
+                margin-block: .7em;
+                border: none;
+                    outline: none;
+                    background-color: var(--primary-color);
+                    color: #fff;
+                    padding: 0.75em 1em;
+                    text-transform: uppercase;
+                    font-size: 1em;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    border-radius: 3px;
+                    box-shadow: 0 2px 6px var(--shadow-color);
+            }
+
+        }
+
+        .btn-link {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+        .para{ 
+            text-align: center;
+        }
+    }
+
+}
